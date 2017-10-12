@@ -119,6 +119,7 @@ Session.vim
 tags
 
 *.jpg
+.direnv
 
 # End of https://www.gitignore.io/api/vim,python
 
