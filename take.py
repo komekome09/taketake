@@ -3,6 +3,7 @@ import feedparser
 import urllib.request
 import bs4
 import re
+import datetime
 
 def download_img(url):
     try:
@@ -46,6 +47,8 @@ def save_img(url, filename):
     f.close()
 
 def main():
+    nowatime = datetime.datetime.now()
+    print("{}: take.py is started.".format(nowatime.strftime("%Y/%m/%d %H:%M:%S")))
     rss_url = "http://mangalifewin.takeshobo.co.jp/rss20.php"
     rss = feedparser.parse(rss_url)
     for entry in rss.entries:
